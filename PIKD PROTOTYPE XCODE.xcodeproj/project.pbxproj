@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		6FFAF12B2E43A61C00BAE19F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FFAF1122E43A61500BAE19F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FFAF1192E43A61500BAE19F;
+			remoteInfo = "PIKD PROTOTYPE XCODE";
+		};
+		6FFAF1352E43A61C00BAE19F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FFAF1122E43A61500BAE19F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FFAF1192E43A61500BAE19F;
+			remoteInfo = "PIKD PROTOTYPE XCODE";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6FFAF11A2E43A61600BAE19F /* PIKD PROTOTYPE XCODE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PIKD PROTOTYPE XCODE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FFAF12A2E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIKD PROTOTYPE XCODETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FFAF1342E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIKD PROTOTYPE XCODEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6FFAF11C2E43A61600BAE19F /* PIKD PROTOTYPE XCODE */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "PIKD PROTOTYPE XCODE";
+			sourceTree = "<group>";
+		};
+		6FFAF12D2E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "PIKD PROTOTYPE XCODETests";
+			sourceTree = "<group>";
+		};
+		6FFAF1372E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "PIKD PROTOTYPE XCODEUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FFAF1172E43A61500BAE19F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FFAF1272E43A61C00BAE19F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FFAF1312E43A61C00BAE19F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FFAF1112E43A61500BAE19F = {
+			isa = PBXGroup;
+			children = (
+				6FFAF11C2E43A61600BAE19F /* PIKD PROTOTYPE XCODE */,
+				6FFAF12D2E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests */,
+				6FFAF1372E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests */,
+				6FFAF11B2E43A61600BAE19F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FFAF11B2E43A61600BAE19F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FFAF11A2E43A61600BAE19F /* PIKD PROTOTYPE XCODE.app */,
+				6FFAF12A2E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests.xctest */,
+				6FFAF1342E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FFAF1192E43A61500BAE19F /* PIKD PROTOTYPE XCODE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FFAF13E2E43A61C00BAE19F /* Build configuration list for PBXNativeTarget "PIKD PROTOTYPE XCODE" */;
+			buildPhases = (
+				6FFAF1162E43A61500BAE19F /* Sources */,
+				6FFAF1172E43A61500BAE19F /* Frameworks */,
+				6FFAF1182E43A61500BAE19F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6FFAF11C2E43A61600BAE19F /* PIKD PROTOTYPE XCODE */,
+			);
+			name = "PIKD PROTOTYPE XCODE";
+			packageProductDependencies = (
+			);
+			productName = "PIKD PROTOTYPE XCODE";
+			productReference = 6FFAF11A2E43A61600BAE19F /* PIKD PROTOTYPE XCODE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FFAF1292E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FFAF1412E43A61C00BAE19F /* Build configuration list for PBXNativeTarget "PIKD PROTOTYPE XCODETests" */;
+			buildPhases = (
+				6FFAF1262E43A61C00BAE19F /* Sources */,
+				6FFAF1272E43A61C00BAE19F /* Frameworks */,
+				6FFAF1282E43A61C00BAE19F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FFAF12C2E43A61C00BAE19F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6FFAF12D2E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests */,
+			);
+			name = "PIKD PROTOTYPE XCODETests";
+			packageProductDependencies = (
+			);
+			productName = "PIKD PROTOTYPE XCODETests";
+			productReference = 6FFAF12A2E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6FFAF1332E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FFAF1442E43A61C00BAE19F /* Build configuration list for PBXNativeTarget "PIKD PROTOTYPE XCODEUITests" */;
+			buildPhases = (
+				6FFAF1302E43A61C00BAE19F /* Sources */,
+				6FFAF1312E43A61C00BAE19F /* Frameworks */,
+				6FFAF1322E43A61C00BAE19F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FFAF1362E43A61C00BAE19F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6FFAF1372E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests */,
+			);
+			name = "PIKD PROTOTYPE XCODEUITests";
+			packageProductDependencies = (
+			);
+			productName = "PIKD PROTOTYPE XCODEUITests";
+			productReference = 6FFAF1342E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FFAF1122E43A61500BAE19F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					6FFAF1192E43A61500BAE19F = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					6FFAF1292E43A61C00BAE19F = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 6FFAF1192E43A61500BAE19F;
+					};
+					6FFAF1332E43A61C00BAE19F = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 6FFAF1192E43A61500BAE19F;
+					};
+				};
+			};
+			buildConfigurationList = 6FFAF1152E43A61500BAE19F /* Build configuration list for PBXProject "PIKD PROTOTYPE XCODE" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FFAF1112E43A61500BAE19F;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6FFAF11B2E43A61600BAE19F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FFAF1192E43A61500BAE19F /* PIKD PROTOTYPE XCODE */,
+				6FFAF1292E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests */,
+				6FFAF1332E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FFAF1182E43A61500BAE19F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FFAF1282E43A61C00BAE19F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FFAF1322E43A61C00BAE19F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FFAF1162E43A61500BAE19F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FFAF1262E43A61C00BAE19F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FFAF1302E43A61C00BAE19F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FFAF12C2E43A61C00BAE19F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FFAF1192E43A61500BAE19F /* PIKD PROTOTYPE XCODE */;
+			targetProxy = 6FFAF12B2E43A61C00BAE19F /* PBXContainerItemProxy */;
+		};
+		6FFAF1362E43A61C00BAE19F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FFAF1192E43A61500BAE19F /* PIKD PROTOTYPE XCODE */;
+			targetProxy = 6FFAF1352E43A61C00BAE19F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6FFAF13C2E43A61C00BAE19F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6FFAF13D2E43A61C00BAE19F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FFAF13F2E43A61C00BAE19F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PIKD PROTOTYPE XCODE/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leo-Nguyen.PIKD-PROTOTYPE-XCODE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FFAF1402E43A61C00BAE19F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PIKD PROTOTYPE XCODE/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leo-Nguyen.PIKD-PROTOTYPE-XCODE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6FFAF1422E43A61C00BAE19F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leo-Nguyen.PIKD-PROTOTYPE-XCODETests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PIKD PROTOTYPE XCODE.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PIKD PROTOTYPE XCODE";
+			};
+			name = Debug;
+		};
+		6FFAF1432E43A61C00BAE19F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leo-Nguyen.PIKD-PROTOTYPE-XCODETests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PIKD PROTOTYPE XCODE.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PIKD PROTOTYPE XCODE";
+			};
+			name = Release;
+		};
+		6FFAF1452E43A61C00BAE19F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leo-Nguyen.PIKD-PROTOTYPE-XCODEUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PIKD PROTOTYPE XCODE";
+			};
+			name = Debug;
+		};
+		6FFAF1462E43A61C00BAE19F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Leo-Nguyen.PIKD-PROTOTYPE-XCODEUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PIKD PROTOTYPE XCODE";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FFAF1152E43A61500BAE19F /* Build configuration list for PBXProject "PIKD PROTOTYPE XCODE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FFAF13C2E43A61C00BAE19F /* Debug */,
+				6FFAF13D2E43A61C00BAE19F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FFAF13E2E43A61C00BAE19F /* Build configuration list for PBXNativeTarget "PIKD PROTOTYPE XCODE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FFAF13F2E43A61C00BAE19F /* Debug */,
+				6FFAF1402E43A61C00BAE19F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FFAF1412E43A61C00BAE19F /* Build configuration list for PBXNativeTarget "PIKD PROTOTYPE XCODETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FFAF1422E43A61C00BAE19F /* Debug */,
+				6FFAF1432E43A61C00BAE19F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FFAF1442E43A61C00BAE19F /* Build configuration list for PBXNativeTarget "PIKD PROTOTYPE XCODEUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FFAF1452E43A61C00BAE19F /* Debug */,
+				6FFAF1462E43A61C00BAE19F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FFAF1122E43A61500BAE19F /* Project object */;
+}
