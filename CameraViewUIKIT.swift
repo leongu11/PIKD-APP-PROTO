@@ -9,6 +9,9 @@ import UIKit
 import AVFoundation
 import Vision
 
+
+//for camera inputs
+
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -23,7 +26,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         
         setupCamera()
         setupOver()
-//        setupHelloWorldLabel()
+        //        setupHelloWorldLabel()
     }
     
     func setupOver() {
@@ -57,7 +60,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.insertSublayer(previewLayer, below: view.layer.sublayers?.first)
-
+        
         DispatchQueue.global(qos: .userInitiated).async {
             self.captureSession.startRunning()
         }
@@ -71,7 +74,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             try reqHandl.perform([HandPoseReq])
             if let observations = HandPoseReq.results, !observations.isEmpty {
                 DispatchQueue.main.async {
-                    self.handleHandObs(observations)
+                    handleHandObs(observations)
                 }
             } else {
                 DispatchQueue.main.async {
@@ -80,36 +83,84 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             }
         } catch {
             print("uh oh the shit couldnt perform:",error)
-            }
+            
         }
-    }
-    
-    func handleHandObs(_ observations: [VNHumanHandPoseObservation]) {
         
-        overlayView.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
         
-        for obs in observations {
-            guard let points = try? obs.recognizedPoints(.all) else { continue }
-            for (_, point) in points {
-                if point.confidence > 0.5 {
-                    let normalizedPoint = CGPoint(x: point.location.x, y: 1 - point.location.y)
-                    let screenPoint = previewLayer.layerPointConverted(fromCaptureDevicePoint: normalizedPoint)
-                    drawPoint(screenPoint)
+        
+        func handleHandObs(_ observations: [VNHumanHandPoseObservation]) {
+            
+            overlayView.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
+            
+            for obs in observations {
+                guard let recognizedPoints = try? obs.recognizedPoints(.all) else { continue }
+                
+                let allIndex: [VNHumanHandPoseObservation.JointName] = [
+                    .indexTip, .indexDIP, .indexPIP, .indexMCP
+                ]
+                
+                for Joint in allIndex {
+                    if let index = recognizedPoints[Joint], index.confidence > 0.5 {
+                        let normalizedPoint = CGPoint(x: index.location.x, y: 1 - index.location.y)
+                        let screenPoint = previewLayer.layerPointConverted(fromCaptureDevicePoint: normalizedPoint)
+                        drawPoint(screenPoint)
+                    }
+                }
+                
+//                for (_, point) in points {
+//                    if point.confidence > 0.5 {
+//                        let normalizedPoint = CGPoint(x: point.location.x, y: 1 - point.location.y)
+//                        let screenPoint = previewLayer.layerPointConverted(fromCaptureDevicePoint: normalizedPoint)
+//                        if let recognizedPoints = try? obs.recognizedPoints(.all),
+//                           let indexTip = recognizedPoints[.indexTip] {
+//                            drawPoint(screenPoint)
+//                        }
+//                    }
                 }
             }
         }
-    }
+        
+        func drawPoint(_ point: CGPoint) {
+            let circleLayer = CAShapeLayer()
+            let radius: CGFloat = 6
+            let circlePath = UIBezierPath(ovalIn: CGRect(x: point.x - radius/2, y: point.y - radius/2, width: radius, height: radius))
+            circleLayer.path = circlePath.cgPath
+            circleLayer.fillColor = UIColor.red.cgColor
+            overlayView.layer.addSublayer(circleLayer)
+        }
     
-    func drawPoint(_ point: CGPoint) {
-        let circleLayer = CAShapeLayer()
-        let radius: CGFloat = 6
-        let circlePath = UIBezierPath(ovalIn: CGRect(x: point.x - radius/2, y: point.y - radius/2, width: radius, height: radius))
-        circleLayer.path = circlePath.cgPath
-        circleLayer.fillColor = UIColor.red.cgColor
-        overlayView.layer.addSublayer(circleLayer)
-    }
-
-
+// uncomment this and use points from new index display/tracking to detect swipes -- connect with label makers to displays
+//        func Detecting(_ LandmarkBuffer: points) {
+//            
+//        
+//        func swipeDetected(_ dir: SwipeDir) {
+//            let swipeLab = UILabel()
+//            if dir == "right" {
+//                swipeLab.text = "right fool"
+//            }
+//            
+//            else if dir == "left" {
+//                swipeLab.text = "left boi"
+//            }
+//            
+//            else if dir == "down" {
+//                swipeLab.text = "downii"
+//            }
+//            
+//            else if dir == "up" {
+//                swipeLab.text = "upping"
+//            }
+//            swipeLab.font = UIFont.systemFont(ofSize: 36, weight: .bold)
+//            swipeLab.textColor = .white
+//            swipeLab.translatesAutoresizingMaskIntoConstraints = false
+//            
+//            view.addSubview(swipeLab)
+//            NSLayoutConstraint.activate([
+//                swipeLab.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//                swipeLab.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+//            ])
+//        }
+}
 //    func setupHelloWorldLabel() {
 //        let label = UILabel()
 //        label.text = "Hello World"
@@ -125,4 +176,3 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
 //        ])
 // 
 //    }
-
