@@ -17,6 +17,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     var previewLayer: AVCaptureVideoPreviewLayer!
     let HandPoseReq = VNDetectHumanHandPoseRequest()
     let overlayView = UIView()
+    let maxFrames = 25
+    var xBuffer = [CGFloat]()
+    var yBuffer = [CGFloat]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +95,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             
             overlayView.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
             
+
             for obs in observations {
                 guard let recognizedPoints = try? obs.recognizedPoints(.all) else { continue }
                 
@@ -104,6 +108,23 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                         let normalizedPoint = CGPoint(x: index.location.x, y: 1 - index.location.y)
                         let screenPoint = previewLayer.layerPointConverted(fromCaptureDevicePoint: normalizedPoint)
                         drawPoint(screenPoint)
+                    
+                        if Joint == .indexTip {
+                            xBuffer.append(index.location.x)
+                            yBuffer.append(index.location.y)
+                            //debug this shit too
+                            if xBuffer.count > maxFrames {
+                                xBuffer.removeFirst(xBuffer.count - maxFrames)
+                                
+                            }
+                            
+                            if yBuffer.count > maxFrames{
+                                yBuffer.removeFirst(yBuffer.count - maxFrames)
+                            }
+                            
+                            Detecting(xBuffer: xBuffer, yBuffer: yBuffer)
+                        }
+                        
                     }
                 }
                 
@@ -120,6 +141,10 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             }
         }
         
+        func removeLabel(_ tag: Int) {
+            view.viewWithTag(tag)?.removeFromSuperview()
+            
+        }
         func drawPoint(_ point: CGPoint) {
             let circleLayer = CAShapeLayer()
             let radius: CGFloat = 6
@@ -129,38 +154,77 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             overlayView.layer.addSublayer(circleLayer)
         }
     
-// uncomment this and use points from new index display/tracking to detect swipes -- connect with label makers to displays
-//        func Detecting(_ LandmarkBuffer: points) {
-//            
-//        
-//        func swipeDetected(_ dir: SwipeDir) {
-//            let swipeLab = UILabel()
-//            if dir == "right" {
-//                swipeLab.text = "right fool"
-//            }
-//            
-//            else if dir == "left" {
-//                swipeLab.text = "left boi"
-//            }
-//            
-//            else if dir == "down" {
-//                swipeLab.text = "downii"
-//            }
-//            
-//            else if dir == "up" {
-//                swipeLab.text = "upping"
-//            }
-//            swipeLab.font = UIFont.systemFont(ofSize: 36, weight: .bold)
-//            swipeLab.textColor = .white
-//            swipeLab.translatesAutoresizingMaskIntoConstraints = false
-//            
-//            view.addSubview(swipeLab)
-//            NSLayoutConstraint.activate([
-//                swipeLab.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//                swipeLab.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//            ])
-//        }
+        func Detecting(xBuffer: Array<CGFloat>, yBuffer: Array<CGFloat>) {
+            if let xBufF = xBuffer.first, let xBufL = xBuffer.last {
+                let disX = xBufF - xBufL
+                
+                //detecting verticle swipes
+                if disX >= 0 {
+                    let disXply = String(format: "%.2f", disX)
+                    DispatchQueue.main.async {
+                        self.showDelta(dt: disXply)
+                    }
+                }
+                
+                else if disX <= -0.10 {
+                    DispatchQueue.main.async {
+                        self.swipeDetected(dir: "left")
+                    }
+                }
+            }
+        }
+        func showDelta(dt: String) {
+            let deltaShow = UILabel()
+            deltaShow.text = dt
+            
+            removeLabel(41)
+            
+            deltaShow.font = UIFont.systemFont(ofSize: 36, weight: .bold)
+            deltaShow.textColor = .white
+            deltaShow.translatesAutoresizingMaskIntoConstraints = false
+            deltaShow.tag = 41
+            
+            view.addSubview(deltaShow)
+                        
+            NSLayoutConstraint.activate([
+                deltaShow.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                deltaShow.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+        }
+        func swipeDetected(dir: String) {
+            let swipeLab = UILabel()
+            if dir == "right" {
+                swipeLab.text = "right fool"
+            }
+            
+            else if dir == "left" {
+                swipeLab.text = "left boi"
+            }
+            
+            else if dir == "down" {
+                swipeLab.text = "downii"
+            }
+            
+            else if dir == "up" {
+                swipeLab.text = "upping"
+            }
+            
+            removeLabel(67)
+            
+            swipeLab.font = UIFont.systemFont(ofSize: 36, weight: .bold)
+            swipeLab.textColor = .white
+            swipeLab.translatesAutoresizingMaskIntoConstraints = false
+            swipeLab.tag = 67
+            
+            view.addSubview(swipeLab)
+                        
+            NSLayoutConstraint.activate([
+                swipeLab.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                swipeLab.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+        }
 }
+
 //    func setupHelloWorldLabel() {
 //        let label = UILabel()
 //        label.text = "Hello World"
