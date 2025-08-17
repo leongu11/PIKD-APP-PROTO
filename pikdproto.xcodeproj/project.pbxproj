@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F2046192E484D3D00D9A360 /* SelfieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2046182E484D3D00D9A360 /* SelfieView.swift */; };
 		6F20461B2E484DAD00D9A360 /* CameraViewUIKIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F20461A2E484D8500D9A360 /* CameraViewUIKIT.swift */; };
+		6FFB67BE2E525B5600C4AE44 /* GamePlayUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFB67BD2E525B5500C4AE44 /* GamePlayUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		6FFAF11A2E43A61600BAE19F /* PIKD PROTOTYPE XCODE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PIKD PROTOTYPE XCODE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFAF12A2E43A61C00BAE19F /* PIKD PROTOTYPE XCODETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIKD PROTOTYPE XCODETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFAF1342E43A61C00BAE19F /* PIKD PROTOTYPE XCODEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PIKD PROTOTYPE XCODEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FFB67BD2E525B5500C4AE44 /* GamePlayUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -82,6 +84,7 @@
 		6FFAF1112E43A61500BAE19F = {
 			isa = PBXGroup;
 			children = (
+				6FFB67BD2E525B5500C4AE44 /* GamePlayUI.swift */,
 				6F2046182E484D3D00D9A360 /* SelfieView.swift */,
 				6F20461A2E484D8500D9A360 /* CameraViewUIKIT.swift */,
 				6FFAF11C2E43A61600BAE19F /* PIKD PROTOTYPE XCODE */,
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F2046192E484D3D00D9A360 /* SelfieView.swift in Sources */,
+				6FFB67BE2E525B5600C4AE44 /* GamePlayUI.swift in Sources */,
 				6F20461B2E484DAD00D9A360 /* CameraViewUIKIT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

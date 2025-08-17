@@ -20,6 +20,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     let maxFrames = 25
     var xBuffer = [CGFloat]()
     var yBuffer = [CGFloat]()
+    var prevDir = "none"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,16 +128,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                         
                     }
                 }
-                
-//                for (_, point) in points {
-//                    if point.confidence > 0.5 {
-//                        let normalizedPoint = CGPoint(x: point.location.x, y: 1 - point.location.y)
-//                        let screenPoint = previewLayer.layerPointConverted(fromCaptureDevicePoint: normalizedPoint)
-//                        if let recognizedPoints = try? obs.recognizedPoints(.all),
-//                           let indexTip = recognizedPoints[.indexTip] {
-//                            drawPoint(screenPoint)
-//                        }
-//                    }
                 }
             }
         }
@@ -155,30 +146,71 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         }
     
         func Detecting(xBuffer: Array<CGFloat>, yBuffer: Array<CGFloat>) {
-            if let xBufF = xBuffer.first, let xBufL = xBuffer.last {
-                let disX = xBufF - xBufL
+            if let xBufF = xBuffer.first, let xBufL = xBuffer.last, let yBufF = yBuffer.first, let yBufL = yBuffer.last {
+                let disY = xBufF - xBufL
+                let disX = yBufF - yBufL
                 
-                //detecting verticle swipes
-                if disX >= 0 {
-                    let disXply = String(format: "%.2f", disX)
-                    DispatchQueue.main.async {
-                        self.showDelta(dt: disXply)
-                    }
+                var differentiateFlag = "none"
+                
+                if abs(disX) > abs(disY) {
+                    differentiateFlag = "horiz"
                 }
                 
-                else if disX <= -0.10 {
+                else {
+                    differentiateFlag = "vert"
+                }
+                
+                //detecting swipes
+                
+                let disXply = String(format: "%.2f %.2f", abs(disX), abs(disY))
+                
+                DispatchQueue.main.async {
+                    self.showDelta(dt: disXply)
+                }
+                
+                if disX <= -0.2, differentiateFlag == "horiz"{
                     DispatchQueue.main.async {
                         self.swipeDetected(dir: "left")
                     }
                 }
+                
+                else if disX >= 0.2, differentiateFlag == "horiz" {
+                    DispatchQueue.main.async {
+                        self.swipeDetected(dir: "right")
+                    }
+                }
+                
+                else {
+                    DispatchQueue.main.async {
+                        self.swipeDetected(dir: "none")
+                    }
+
+                }
+                
+                if disY >= 0.2, differentiateFlag == "vert" {
+                    DispatchQueue.main.async {
+                        self.swipeDetected(dir: "up")
+                    }
+                }
+                
+                else if disY <= -0.2, differentiateFlag == "vert" {
+                    DispatchQueue.main.async {
+                        self.swipeDetected(dir: "down")
+                    }
+                }
+                
+                else {
+                    DispatchQueue.main.async {
+                        self.swipeDetected(dir: "none")
+                    }
+                }
             }
         }
+            
         func showDelta(dt: String) {
             let deltaShow = UILabel()
             deltaShow.text = dt
-            
             removeLabel(41)
-            
             deltaShow.font = UIFont.systemFont(ofSize: 36, weight: .bold)
             deltaShow.textColor = .white
             deltaShow.translatesAutoresizingMaskIntoConstraints = false
@@ -209,8 +241,12 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
                 swipeLab.text = "upping"
             }
             
-            removeLabel(67)
+            else {
+                swipeLab.text = ""
+            }
             
+            removeLabel(67)
+            print(dir)
             swipeLab.font = UIFont.systemFont(ofSize: 36, weight: .bold)
             swipeLab.textColor = .white
             swipeLab.translatesAutoresizingMaskIntoConstraints = false
@@ -225,18 +261,3 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         }
 }
 
-//    func setupHelloWorldLabel() {
-//        let label = UILabel()
-//        label.text = "Hello World"
-//        label.font = UIFont.systemFont(ofSize: 36, weight: .bold)
-//        label.textColor = .white
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//
-//        view.addSubview(label)
-//
-//        NSLayoutConstraint.activate([
-//            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//        ])
-// 
-//    }
