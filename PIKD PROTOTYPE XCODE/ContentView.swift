@@ -5,6 +5,8 @@
 //  Created by Leo Nguyen on 8/6/25.
 //
 
+//CHANGE EVERYTHING TO UIKIT BRUH
+
 import SwiftUI
 
 struct ContentView: View {
